@@ -8,7 +8,7 @@ This C# project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.h
 
 
 ## Screenshot
-<img src="vintasoft-raw-image-viewer-demo.jpg" alt="VintaSoft RAW Image Viewer Demo">
+<img src="vintasoft-raw-image-viewer-demo.jpg" title="VintaSoft RAW Image Viewer Demo">
 
 
 ## Usage
