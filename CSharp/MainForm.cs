@@ -204,7 +204,7 @@ namespace RawImageViewerDemo
         #region 'File' menu
 
         /// <summary>
-        /// Handles the Click event of OpenToolStripMenuItem object.
+        /// Handles the Click event of openToolStripMenuItem object.
         /// </summary>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -215,7 +215,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of CloseToolStripMenuItem object.
+        /// Handles the Click event of closeToolStripMenuItem object.
         /// </summary>
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -223,7 +223,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PageSettingsToolStripMenuItem object.
+        /// Handles the Click event of pageSettingsToolStripMenuItem object.
         /// </summary>
         private void pageSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -231,7 +231,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PrintToolStripMenuItem object.
+        /// Handles the Click event of printToolStripMenuItem object.
         /// </summary>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -239,7 +239,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ExitToolStripMenuItem object.
+        /// Handles the Click event of exitToolStripMenuItem object.
         /// </summary>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -254,7 +254,7 @@ namespace RawImageViewerDemo
         #region 'View' menu
 
         /// <summary>
-        /// Handles the Click event of ThumbnailViewerSettingsToolStripMenuItem object.
+        /// Handles the Click event of thumbnailViewerSettingsToolStripMenuItem object.
         /// </summary>
         private void thumbnailViewerSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -285,7 +285,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RotateClockwiseToolStripMenuItem object.
+        /// Handles the Click event of rotateClockwiseToolStripMenuItem object.
         /// </summary>
         private void rotateClockwiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -293,7 +293,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of CounterclockwiseToolStripMenuItem object.
+        /// Handles the Click event of counterclockwiseToolStripMenuItem object.
         /// </summary>
         private void counterclockwiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -301,7 +301,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ImageViewerSettingsToolStripMenuItem object.
+        /// Handles the Click event of imageViewerSettingsToolStripMenuItem object.
         /// </summary>
         private void imageViewerSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -312,7 +312,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the ZoomChanged event of ImageViewer1 object.
+        /// Handles the ZoomChanged event of imageViewer1 object.
         /// </summary>
         private void imageViewer1_ZoomChanged(object sender, ZoomChangedEventArgs e)
         {
@@ -349,7 +349,7 @@ namespace RawImageViewerDemo
         #region 'Page' menu
 
         /// <summary>
-        /// Handles the Click event of PageMetadataToolStripMenuItem object.
+        /// Handles the Click event of pageMetadataToolStripMenuItem object.
         /// </summary>
         private void pageMetadataToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -364,7 +364,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of InterpolationModeToolStripMenuItem object.
+        /// Handles the Click event of interpolationModeToolStripMenuItem object.
         /// </summary>
         private void interpolationModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -382,7 +382,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the Click event of WhiteBalanceToolStripMenuItem object.
+        /// Handles the Click event of whiteBalanceToolStripMenuItem object.
         /// </summary>
         private void whiteBalanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -405,7 +405,7 @@ namespace RawImageViewerDemo
         #region 'Help' menu
 
         /// <summary>
-        /// Handles the Click event of AboutToolStripMenuItem object.
+        /// Handles the Click event of aboutToolStripMenuItem object.
         /// </summary>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -419,7 +419,7 @@ namespace RawImageViewerDemo
 
 
         /// <summary>
-        /// Handles the FocusedIndexChanged event of ImageViewer1 object.
+        /// Handles the FocusedIndexChanged event of imageViewer1 object.
         /// </summary>
         private void imageViewer1_FocusedIndexChanged(object sender, FocusedIndexChangedEventArgs e)
         {

@@ -124,7 +124,7 @@ namespace RawImageViewerDemo
         #region UI
 
         /// <summary>
-        /// Handles the Click event of OkButton object.
+        /// Handles the Click event of okButton object.
         /// </summary>
         private void okButton_Click(object sender, EventArgs e)
         {
@@ -136,7 +136,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of RedValueTrackBar object.
+        /// Handles the ValueChanged event of redValueTrackBar object.
         /// </summary>
         private void redValueTrackBar_ValueChanged(object sender, EventArgs e)
         {
@@ -144,7 +144,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of GreenValueTrackBar object.
+        /// Handles the ValueChanged event of greenValueTrackBar object.
         /// </summary>
         private void greenValueTrackBar_ValueChanged(object sender, EventArgs e)
         {
@@ -152,7 +152,7 @@ namespace RawImageViewerDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of BlueValueTrackBar object.
+        /// Handles the ValueChanged event of blueValueTrackBar object.
         /// </summary>
         private void blueValueTrackBar_ValueChanged(object sender, EventArgs e)
         {
