@@ -29,11 +29,13 @@ namespace RawImageViewerDemo
         private void InitializeComponent()
         {
             Vintasoft.Imaging.Utils.WinFormsSystemClipboard winFormsSystemClipboard1 = new Vintasoft.Imaging.Utils.WinFormsSystemClipboard();
+            Vintasoft.Imaging.Codecs.Decoders.RenderingSettings renderingSettings1 = new Vintasoft.Imaging.Codecs.Decoders.RenderingSettings();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance1 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance2 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance3 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance4 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance5 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
+            Vintasoft.Imaging.UI.ThumbnailCaption thumbnailCaption1 = new Vintasoft.Imaging.UI.ThumbnailCaption();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +83,6 @@ namespace RawImageViewerDemo
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.imageInfoToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.progressBarLoadingRawFile = new System.Windows.Forms.ToolStripProgressBar();
-            this.imageViewerToolstrip1 = new DemosCommonCode.Imaging.ImageViewerToolStrip();
             this.imageViewer1 = new Vintasoft.Imaging.UI.ImageViewer();
             this.thumbnailViewer1 = new Vintasoft.Imaging.UI.ThumbnailViewer();
             this.openImageFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -89,6 +90,7 @@ namespace RawImageViewerDemo
             this.printImageDialog = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.imageViewerToolstrip1 = new DemosCommonCode.Imaging.ImageViewerToolStrip();
             this.mainMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -194,7 +196,7 @@ namespace RawImageViewerDemo
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(220, 6);
             // 
             // imageScaleModeToolStripMenuItem
             // 
@@ -212,91 +214,91 @@ namespace RawImageViewerDemo
             this.scale200ToolStripMenuItem,
             this.scale400ToolStripMenuItem});
             this.imageScaleModeToolStripMenuItem.Name = "imageScaleModeToolStripMenuItem";
-            this.imageScaleModeToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.imageScaleModeToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.imageScaleModeToolStripMenuItem.Text = "Image Scale Mode";
             // 
             // normalImageToolStripMenuItem
             // 
             this.normalImageToolStripMenuItem.Name = "normalImageToolStripMenuItem";
-            this.normalImageToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.normalImageToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.normalImageToolStripMenuItem.Text = "Normal";
             this.normalImageToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // bestFitToolStripMenuItem
             // 
             this.bestFitToolStripMenuItem.Name = "bestFitToolStripMenuItem";
-            this.bestFitToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.bestFitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.bestFitToolStripMenuItem.Text = "Best fit";
             this.bestFitToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // fitToWidthToolStripMenuItem
             // 
             this.fitToWidthToolStripMenuItem.Name = "fitToWidthToolStripMenuItem";
-            this.fitToWidthToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.fitToWidthToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.fitToWidthToolStripMenuItem.Text = "Fit to width";
             this.fitToWidthToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // fitToHeightToolStripMenuItem
             // 
             this.fitToHeightToolStripMenuItem.Name = "fitToHeightToolStripMenuItem";
-            this.fitToHeightToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.fitToHeightToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.fitToHeightToolStripMenuItem.Text = "Fit to height";
             this.fitToHeightToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // scaleToolStripMenuItem
             // 
             this.scaleToolStripMenuItem.Name = "scaleToolStripMenuItem";
-            this.scaleToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.scaleToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.scaleToolStripMenuItem.Text = "Scale";
             this.scaleToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // pixelToPixelToolStripMenuItem
             // 
             this.pixelToPixelToolStripMenuItem.Name = "pixelToPixelToolStripMenuItem";
-            this.pixelToPixelToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.pixelToPixelToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.pixelToPixelToolStripMenuItem.Text = "Pixel to pixel";
             this.pixelToPixelToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(136, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(138, 6);
             // 
             // scale25ToolStripMenuItem
             // 
             this.scale25ToolStripMenuItem.Name = "scale25ToolStripMenuItem";
-            this.scale25ToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.scale25ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.scale25ToolStripMenuItem.Text = "25%";
             this.scale25ToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // scale50ToolStripMenuItem
             // 
             this.scale50ToolStripMenuItem.Name = "scale50ToolStripMenuItem";
-            this.scale50ToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.scale50ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.scale50ToolStripMenuItem.Text = "50%";
             this.scale50ToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // scale100ToolStripMenuItem
             // 
             this.scale100ToolStripMenuItem.Name = "scale100ToolStripMenuItem";
-            this.scale100ToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.scale100ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.scale100ToolStripMenuItem.Text = "100%";
             this.scale100ToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // scale200ToolStripMenuItem
             // 
             this.scale200ToolStripMenuItem.Name = "scale200ToolStripMenuItem";
-            this.scale200ToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.scale200ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.scale200ToolStripMenuItem.Text = "200%";
             this.scale200ToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
             // 
             // scale400ToolStripMenuItem
             // 
             this.scale400ToolStripMenuItem.Name = "scale400ToolStripMenuItem";
-            this.scale400ToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.scale400ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.scale400ToolStripMenuItem.Text = "400%";
             this.scale400ToolStripMenuItem.Click += new System.EventHandler(this.ImageScale_Click);
-            //
+            // 
             // rotateViewToolStripMenuItem
             // 
             this.rotateViewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -310,7 +312,7 @@ namespace RawImageViewerDemo
             // 
             this.rotateClockwiseToolStripMenuItem.Name = "rotateClockwiseToolStripMenuItem";
             this.rotateClockwiseToolStripMenuItem.ShortcutKeyDisplayString = "Shift+Ctrl+Plus";
-            this.rotateClockwiseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+            this.rotateClockwiseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.Oemplus)));
             this.rotateClockwiseToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.rotateClockwiseToolStripMenuItem.Text = "Clockwise";
@@ -320,7 +322,7 @@ namespace RawImageViewerDemo
             // 
             this.counterclockwiseToolStripMenuItem.Name = "counterclockwiseToolStripMenuItem";
             this.counterclockwiseToolStripMenuItem.ShortcutKeyDisplayString = "Shift+Ctrl+Minus";
-            this.counterclockwiseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+            this.counterclockwiseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.OemMinus)));
             this.counterclockwiseToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.counterclockwiseToolStripMenuItem.Text = "Counterclockwise";
@@ -329,7 +331,7 @@ namespace RawImageViewerDemo
             // imageViewerSettingsToolStripMenuItem
             // 
             this.imageViewerSettingsToolStripMenuItem.Name = "imageViewerSettingsToolStripMenuItem";
-            this.imageViewerSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.imageViewerSettingsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.imageViewerSettingsToolStripMenuItem.Text = "Image Viewer Settings...";
             this.imageViewerSettingsToolStripMenuItem.Click += new System.EventHandler(this.imageViewerSettingsToolStripMenuItem_Click);
             // 
@@ -471,31 +473,20 @@ namespace RawImageViewerDemo
             this.progressBarLoadingRawFile.Size = new System.Drawing.Size(150, 16);
             this.progressBarLoadingRawFile.Visible = false;
             // 
-            // imageViewerToolstrip1
-            // 
-            this.imageViewerToolstrip1.AssociatedZoomTrackBar = null;
-            this.imageViewerToolstrip1.CanSaveFile = false;
-            this.imageViewerToolstrip1.ImageViewer = this.imageViewer1;
-            this.imageViewerToolstrip1.ScanButtonEnabled = true;
-            this.imageViewerToolstrip1.Location = new System.Drawing.Point(0, 24);
-            this.imageViewerToolstrip1.Name = "imageViewerToolstrip1";
-            this.imageViewerToolstrip1.PageCount = 0;
-            this.imageViewerToolstrip1.PrintButtonEnabled = true;
-            this.imageViewerToolstrip1.SaveButtonEnabled = true;
-            this.imageViewerToolstrip1.Size = new System.Drawing.Size(855, 25);
-            this.imageViewerToolstrip1.TabIndex = 3;
-            this.imageViewerToolstrip1.Text = "imageViewerToolstrip1";
-            this.imageViewerToolstrip1.UseImageViewerImages = true;
-            this.imageViewerToolstrip1.OpenFile += new System.EventHandler(this.openToolStripMenuItem_Click);
-            this.imageViewerToolstrip1.Print += new System.EventHandler(this.printToolStripMenuItem_Click);
-            // 
             // imageViewer1
             // 
             this.imageViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageViewer1.CenterImage = true;
             this.imageViewer1.Clipboard = winFormsSystemClipboard1;
             this.imageViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imageViewer1.FastScrollingCursor = System.Windows.Forms.Cursors.SizeAll;
+            this.imageViewer1.FastScrollingInterval = 10;
+            this.imageViewer1.FastScrollingMinDistance = 5F;
+            this.imageViewer1.FastScrollingMouseButton = System.Windows.Forms.MouseButtons.Middle;
+            this.imageViewer1.FastScrollingScale = 0.5F;
             this.imageViewer1.FocusPointAnchor = Vintasoft.Imaging.AnchorType.None;
+            this.imageViewer1.ImageRenderingSettings = renderingSettings1;
+            this.imageViewer1.ImageRotationAngle = 0;
             this.imageViewer1.Location = new System.Drawing.Point(0, 0);
             this.imageViewer1.MasterViewer = this.thumbnailViewer1;
             this.imageViewer1.Name = "imageViewer1";
@@ -517,6 +508,11 @@ namespace RawImageViewerDemo
             this.thumbnailViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thumbnailViewer1.Clipboard = winFormsSystemClipboard1;
             this.thumbnailViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thumbnailViewer1.FastScrollingCursor = System.Windows.Forms.Cursors.SizeAll;
+            this.thumbnailViewer1.FastScrollingInterval = 10;
+            this.thumbnailViewer1.FastScrollingMinDistance = 5F;
+            this.thumbnailViewer1.FastScrollingMouseButton = System.Windows.Forms.MouseButtons.Middle;
+            this.thumbnailViewer1.FastScrollingScale = 0.5F;
             thumbnailAppearance1.BackColor = System.Drawing.Color.Transparent;
             thumbnailAppearance1.BorderColor = System.Drawing.Color.Gray;
             thumbnailAppearance1.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Dotted;
@@ -527,6 +523,7 @@ namespace RawImageViewerDemo
             thumbnailAppearance2.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
             thumbnailAppearance2.BorderWidth = 2;
             this.thumbnailViewer1.HoveredThumbnailAppearance = thumbnailAppearance2;
+            this.thumbnailViewer1.ImageRotationAngle = 0;
             this.thumbnailViewer1.Location = new System.Drawing.Point(0, 0);
             this.thumbnailViewer1.Name = "thumbnailViewer1";
             thumbnailAppearance3.BackColor = System.Drawing.Color.Black;
@@ -551,14 +548,18 @@ namespace RawImageViewerDemo
             thumbnailAppearance5.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
             thumbnailAppearance5.BorderWidth = 1;
             this.thumbnailViewer1.ThumbnailAppearance = thumbnailAppearance5;
+            thumbnailCaption1.Padding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
+            thumbnailCaption1.TextColor = System.Drawing.Color.Black;
+            this.thumbnailViewer1.ThumbnailCaption = thumbnailCaption1;
+            this.thumbnailViewer1.ThumbnailControlPadding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
+            this.thumbnailViewer1.ThumbnailImagePadding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
             this.thumbnailViewer1.ThumbnailMargin = new System.Windows.Forms.Padding(3);
+            this.thumbnailViewer1.ThumbnailRenderingSettings = null;
             this.thumbnailViewer1.ThumbnailSize = new System.Drawing.Size(100, 100);
             // 
             // openImageFileDialog
             // 
-            this.openImageFileDialog.Filter = "All supported RAW files|*.cr2;*.crw;*.nef;*.nrw;*.dng|Adobe DNG files|*.dng|Canon" +
-    " CR2 files|*.cr2|Canon CRW files|*.crw|Nikon NEF files|*.nef|Nikon NRW files|*.n" +
-    "rw";
+            this.openImageFileDialog.Filter = resources.GetString("openImageFileDialog.Filter");
             // 
             // imagePrintDocument1
             // 
@@ -594,6 +595,24 @@ namespace RawImageViewerDemo
             this.splitContainer1.Size = new System.Drawing.Size(855, 513);
             this.splitContainer1.SplitterDistance = 193;
             this.splitContainer1.TabIndex = 6;
+            // 
+            // imageViewerToolstrip1
+            // 
+            this.imageViewerToolstrip1.AssociatedZoomTrackBar = null;
+            this.imageViewerToolstrip1.CanSaveFile = false;
+            this.imageViewerToolstrip1.CaptureFromCameraButtonEnabled = true;
+            this.imageViewerToolstrip1.ImageViewer = this.imageViewer1;
+            this.imageViewerToolstrip1.Location = new System.Drawing.Point(0, 24);
+            this.imageViewerToolstrip1.Name = "imageViewerToolstrip1";
+            this.imageViewerToolstrip1.PageCount = 0;
+            this.imageViewerToolstrip1.PrintButtonEnabled = true;
+            this.imageViewerToolstrip1.ScanButtonEnabled = true;
+            this.imageViewerToolstrip1.Size = new System.Drawing.Size(855, 25);
+            this.imageViewerToolstrip1.TabIndex = 3;
+            this.imageViewerToolstrip1.Text = "imageViewerToolstrip1";
+            this.imageViewerToolstrip1.UseImageViewerImages = true;
+            this.imageViewerToolstrip1.OpenFile += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.imageViewerToolstrip1.Print += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // MainForm
             // 
