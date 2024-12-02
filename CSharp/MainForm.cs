@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
@@ -146,6 +147,7 @@ namespace RawImageViewerDemo
         /// <summary>
         /// Gets or sets a value indicating whether RAW file is opening.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         internal bool IsRawFileOpening
         {
             get

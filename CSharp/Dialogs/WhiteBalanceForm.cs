@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace RawImageViewerDemo
@@ -29,6 +30,7 @@ namespace RawImageViewerDemo
         /// <summary>
         /// Gets or sets a value of red channel.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double WhiteBalanceRed
         {
             get
@@ -47,6 +49,7 @@ namespace RawImageViewerDemo
         /// <summary>
         /// Gets or sets a value of green channel.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double WhiteBalanceGreen
         {
             get
@@ -65,6 +68,7 @@ namespace RawImageViewerDemo
         /// <summary>
         /// Gets or sets a value of blue channel.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double WhiteBalanceBlue
         {
             get
