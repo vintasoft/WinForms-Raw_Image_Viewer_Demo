@@ -1,4 +1,4 @@
-namespace RawImageViewerDemo
+﻿namespace RawImageViewerDemo
 {
     partial class MainForm
     {
@@ -90,7 +90,7 @@ namespace RawImageViewerDemo
             this.printImageDialog = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.imageViewerToolstrip1 = new DemosCommonCode.Imaging.ImageViewerToolStrip();
+            this.imageViewerToolstrip1 = new CommonCode.Imaging.ImageViewerToolStrip();
             this.mainMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -649,7 +649,7 @@ namespace RawImageViewerDemo
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private DemosCommonCode.Imaging.ImageViewerToolStrip imageViewerToolstrip1;
+        private CommonCode.Imaging.ImageViewerToolStrip imageViewerToolstrip1;
         private System.Windows.Forms.OpenFileDialog openImageFileDialog;
         private System.Windows.Forms.ToolStripMenuItem pageToolStripMenuItem;
         private Vintasoft.Imaging.UI.ThumbnailViewer thumbnailViewer1;

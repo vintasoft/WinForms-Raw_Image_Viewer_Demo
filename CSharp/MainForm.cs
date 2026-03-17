@@ -9,8 +9,8 @@ using Vintasoft.Imaging.Codecs.ImageFiles.Raw;
 using Vintasoft.Imaging.Metadata;
 using Vintasoft.Imaging.UI;
 
-using DemosCommonCode;
-using DemosCommonCode.Imaging;
+using CommonCode;
+using CommonCode.Imaging;
 
 
 namespace RawImageViewerDemo
